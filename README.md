@@ -1,1 +1,1 @@
-# map-stats
+# oskarlh-typescript-project
