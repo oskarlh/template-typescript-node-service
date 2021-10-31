@@ -5,7 +5,6 @@
 	"main": "dist/index.js",
 	"author": "Oskar Larsson Högfeldt <g@oskar-lh.name>",
 	"license": "MIT",
-	"type": "module",
 	"devDependencies": {
 		"@babel/core": "^7.15.0",
 		"@babel/preset-env": "^7.15.0",

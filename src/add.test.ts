@@ -1,4 +1,4 @@
-import add from "./add.js";
+import add from "./add";
 
 describe("add", () => {
 	it("adds 1 and 1", () => {
