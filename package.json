@@ -28,7 +28,7 @@
 	"scripts": {
 		"build": "tsc",
 		"build-start": "tsc && yarn run start",
-		"ci-install-and-verify": "yarn install --immutable --immutable-cache --check-cache && yarn run test --ci && yarn run lint",
+		"ci-install-and-verify": "yarn install --immutable --immutable-cache && yarn run test --ci && yarn run lint && yarn install --immutable --immutable-cache --check-cache",
 		"dev": "ts-node-dev -- ./src/index.ts",
 		"dev-inspect": "ts-node-dev --inspect -- ./src/index.ts",
 		"lint": "eslint .",
