@@ -1,1 +1,1 @@
-# oskarlh-typescript-project
+# template-typescript-node
