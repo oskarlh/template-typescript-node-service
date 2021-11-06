@@ -1,8 +1,8 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "kavod-io.vscode-jest-test-adapter",
     "arcanis.vscode-zipfs",
-    "esbenp.prettier-vscode"
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "orta.vscode-jest",
   ]
 }
