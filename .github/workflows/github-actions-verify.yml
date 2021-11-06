@@ -1,9 +1,9 @@
-name: Test & Lint
+name: Test, lint, verify modules
 on: push
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install modules, run tests, run linter
+    - name: Run tests, run linter, verify Node modules
       run: yarn run ci-install-and-verify
