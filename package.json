@@ -5,26 +5,25 @@
 	"main": "dist/index.js",
 	"author": "Oskar Larsson Högfeldt <g@oskar-lh.name>",
 	"license": "MIT",
-	"jest": {
-		"rootDir": "./src",
-		"testRegex": "\\.test\\.ts$"
-	},
 	"devDependencies": {
-		"@babel/core": "^7.15.0",
-		"@babel/preset-env": "^7.15.0",
-		"@babel/preset-typescript": "^7.15.0",
-		"@types/jest": "^27.0.1",
+		"@types/jest": "^27.0.2",
 		"@types/node": "^16.11.6",
 		"@typescript-eslint/eslint-plugin": "^5.2.0",
 		"@typescript-eslint/parser": "^5.2.0",
-		"babel-jest": "^27.0.6",
 		"eslint": "^8.1.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^4.0.0",
-		"jest": "^27.0.6",
+		"jest": "^27.3.1",
 		"prettier": "^2.3.2",
+		"ts-jest": "^27.0.7",
 		"ts-node-dev": "^1.1.8",
 		"typescript": "^4.4.4"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"rootDir": "./src",
+		"testEnvironment": "node",
+		"testRegex": "\\.test\\.ts$"
 	},
 	"scripts": {
 		"build": "tsc",
