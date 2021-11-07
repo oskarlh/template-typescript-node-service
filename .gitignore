@@ -1,7 +1,7 @@
 
 /dist
 
-#Yarn 3 with Zero-Installs
+# Yarn with Zero-Installs
 .yarn/*
 !.yarn/cache
 !.yarn/patches
