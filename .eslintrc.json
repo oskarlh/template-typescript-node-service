@@ -12,10 +12,18 @@
 		"node": true
 	},
 	"rules": {
+		"@typescript-eslint/no-empty-function": "off",
 		"@typescript-eslint/no-unused-vars": "off",
+		"no-else-return": ["warn", { "allowElseIf": true }],
+		"no-param-reassign": [
+			"error",
+			{
+				"props": true
+			}
+		],
 		"prefer-const": ["warn", { "destructuring": "all" }],
 		"sort-keys": ["warn", "asc", { "natural": true }],
 		"sort-vars": "warn",
-  		"prettier/prettier": "warn"
+		"prettier/prettier": "warn"
 	}
 }

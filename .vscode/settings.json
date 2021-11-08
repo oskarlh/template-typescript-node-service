@@ -13,5 +13,8 @@
 	"typescript.tsdk": ".yarn/sdks/typescript/lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"jest.jestCommandLine": "yarn run jest",
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"eslint.rules.customizations": [
+		{ "rule": "prettier/prettier", "severity": "off" }
+	]
 }
