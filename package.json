@@ -3,6 +3,7 @@
 	"repository": "https://github.com/oskarlh/oskarlh-typescript-project.git",
 	"version": "1.0.0",
 	"main": "dist/index.js",
+	"type": "module",
 	"author": "Oskar Larsson Högfeldt <g@oskar-lh.name>",
 	"license": "MIT",
 	"devDependencies": {
@@ -14,19 +15,20 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"jest": "^27.3.1",
+		"nodemon": "^2.0.15",
 		"prettier": "^2.3.2",
 		"ts-jest": "^27.0.7",
-		"ts-node-dev": "^1.1.8",
 		"typescript": "^4.4.4"
 	},
 	"scripts": {
 		"build": "tsc",
 		"build-start": "tsc && yarn run start",
 		"ci-install-and-verify": "yarn install --immutable --immutable-cache && yarn run test --ci && yarn run lint && yarn install --immutable --immutable-cache --check-cache",
-		"dev": "ts-node-dev -- ./src/index.ts",
-		"dev-inspect": "ts-node-dev --inspect -- ./src/index.ts",
+		"dev": "nodemon",
+		"dev-build-and-run": "yarn run build && node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
+		"dev-inspect": "node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
 		"lint": "eslint .",
-		"start": "node --require=./suppressExperimentalWarnings.cjs dist/index.js",
+		"start": "node --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
 		"test": "jest"
 	},
 	"packageManager": "yarn@3.1.0"

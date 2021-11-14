@@ -1,6 +1,6 @@
 import process from "process";
 import { setTimeout } from "timers";
-import main from "./main";
+import main from "./main.js";
 
 // SIGINT & error handling. Calls main()
 
@@ -12,8 +12,8 @@ const SHUTDOWN_MAIN_TIMEOUT_SECONDS = 15 * 60;
 
 	let mainFinished = false;
 
+	// Handle kill signals
 	process.once("SIGINT", () => {
-		console.log("Received SIGINT. Shutting down...");
 		sigintController.abort();
 		setTimeout(() => {
 			if (!mainFinished) {
@@ -33,7 +33,7 @@ const SHUTDOWN_MAIN_TIMEOUT_SECONDS = 15 * 60;
 	}
 	mainFinished = true;
 
-	// This SHOULDN'T be necessary, but from experience it's not uncommon
+	// This SHOULD NOT be necessary, but from experience it is not uncommon
 	// for developers to forget to close sockets, timers etc.
 	setTimeout(() => {
 		console.error(
