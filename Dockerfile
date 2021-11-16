@@ -4,7 +4,6 @@ FROM node:17-alpine as builder
 WORKDIR /app
 COPY . .
 RUN cd /app
-RUN find . -type f ! -name '*.gz' ! -name '*.zip' -print0 | xargs -0 -n 16 -P 4 dos2unix
 
 ENV NODE_ENV=production
 RUN yarn run build
