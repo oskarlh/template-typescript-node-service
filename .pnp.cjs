@@ -36,13 +36,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@types/jest", "npm:27.0.2"],
-            ["@types/node", "npm:16.11.6"],
+            ["@types/node", "npm:16.11.7"],
             ["@typescript-eslint/eslint-plugin", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:5.2.0"],
             ["@typescript-eslint/parser", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:5.2.0"],
             ["eslint", "npm:8.1.0"],
             ["eslint-config-prettier", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:4.0.0"],
             ["jest", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:27.3.1"],
+            ["jest-environment-node-single-context", "npm:27.2.0"],
             ["nodemon", "npm:2.0.15"],
             ["prettier", "npm:2.4.1"],
             ["ts-jest", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:27.0.7"],
@@ -1341,6 +1342,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-16.11.6-3a38cc239a-6e19634766.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:16.11.6"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:16.11.7", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.7-1799a0a435-2706403e6e.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:16.11.7"]
           ],
           "linkType": "HARD",
         }]
@@ -4130,6 +4138,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["jest-environment-node-single-context", [
+        ["npm:27.2.0", {
+          "packageLocation": "./.yarn/cache/jest-environment-node-single-context-npm-27.2.0-3dc64f3459-19578b5abd.zip/node_modules/jest-environment-node-single-context/",
+          "packageDependencies": [
+            ["jest-environment-node-single-context", "npm:27.2.0"],
+            ["jest-environment-node", "npm:27.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["jest-get-type", [
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-get-type-npm-27.3.1-fdb27a0157-b0b8db1d77.zip/node_modules/jest-get-type/",
@@ -5176,13 +5194,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["oskarlh-typescript-project", "workspace:."],
             ["@types/jest", "npm:27.0.2"],
-            ["@types/node", "npm:16.11.6"],
+            ["@types/node", "npm:16.11.7"],
             ["@typescript-eslint/eslint-plugin", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:5.2.0"],
             ["@typescript-eslint/parser", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:5.2.0"],
             ["eslint", "npm:8.1.0"],
             ["eslint-config-prettier", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:4.0.0"],
             ["jest", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:27.3.1"],
+            ["jest-environment-node-single-context", "npm:27.2.0"],
             ["nodemon", "npm:2.0.15"],
             ["prettier", "npm:2.4.1"],
             ["ts-jest", "virtual:3219006fc636f1e877982c2ad15bbaf003ede3f72529479b09bc20a897bbb9d2097c38e54b2c80081e8664320d3a79172a707c5203b19e318ddc4c9e5ddd4a5e#npm:27.0.7"],
