@@ -1,0 +1,12 @@
+/.github
+/.vscode
+/dist
+
+**/*.test.ts
+/.dockerignore
+/LICENSE
+/README.md
+/docker-compose.yml
+/Dockerfile
+/jest.config.json
+/tsconfig.tsbuildinfo
