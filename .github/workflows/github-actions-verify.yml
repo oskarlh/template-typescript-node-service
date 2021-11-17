@@ -15,7 +15,7 @@ jobs:
 #      run: docker login -u $DOCKER_USER -p $DOCKER_PASS
 
     - name: Build image with tests
-      run: docker compose build
+      run: docker compose -f $COMPOSE_FILE build
 
     - name: Run tests, run linter, verify Node modules
-      run: docker run ci-verifier
+      run: docker compose -f $COMPOSE_FILE run ci-verifier
