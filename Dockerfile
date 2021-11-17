@@ -12,7 +12,6 @@ FROM node:17-alpine as builder
 WORKDIR /app
 COPY . .
 ENV NODE_ENV=development
-RUN yarn rebuild
 RUN yarn install --immutable --immutable-cache
 RUN yarn run build
 
