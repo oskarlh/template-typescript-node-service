@@ -3,18 +3,16 @@ on: [ "pull_request", "push" ]
 jobs:
   verify:
     runs-on: ubuntu-latest
+    env:
+      COMPOSE_FILE: docker-compose.ci-verifier.yml
+# TODO:      DOCKER_USER: ${{ secrets.DOCKER_USER }}
+# TODO:      DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
     steps:
+    - name: Code checkout
     - uses: actions/checkout@v2
 
-    - name: Read NodeJS version form .nvmrc
-      run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-      id: nvmrc
-
-    - name: Setup node
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{steps.nvmrc.outputs.NVMRC}}
-        cache: 'yarn'
+    - name: Build image with tests
+      run: docker compose build
 
     - name: Run tests, run linter, verify Node modules
-      run: yarn run ci-install-and-verify
+      run: docker-compose.ci-verifier.yml run ci-verifier
