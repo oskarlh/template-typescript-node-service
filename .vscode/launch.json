@@ -1,0 +1,17 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"cwd": "${workspaceRoot}",
+			"internalConsoleOptions": "openOnSessionStart",
+			"name": "Debug Program",
+			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
+			"preLaunchTask": "npm: build",
+			"program": "${workspaceFolder}/src/index.ts",
+			"request": "launch",
+			"runtimeArgs": ["--nolazy", "--inspect", "--enable-source-maps"],
+			"skipFiles": ["<node_internals>/**", ".yarn/**"],
+			"type": "pwa-node"
+		}
+	]
+}
