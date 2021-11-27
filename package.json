@@ -7,19 +7,19 @@
 	"author": "Oskar Larsson Högfeldt <g@oskar-lh.name>",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/jest": "^27.0.2",
+		"@types/jest": "^27.0.3",
 		"@types/node": "^16.11.7",
 		"@typescript-eslint/eslint-plugin": "^5.2.0",
 		"@typescript-eslint/parser": "^5.2.0",
-		"eslint": "^8.1.0",
+		"eslint": "^8.3.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"jest": "^27.3.1",
 		"jest-environment-node-single-context": "^27.2.0",
 		"nodemon": "^2.0.15",
-		"prettier": "^2.3.2",
+		"prettier": "^2.5.0",
 		"ts-jest": "^27.0.7",
-		"typescript": "^4.4.4"
+		"typescript": "~4.4.4"
 	},
 	"scripts": {
 		"build": "tsc",
