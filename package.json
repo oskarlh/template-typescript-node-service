@@ -25,12 +25,11 @@
 		"build": "tsc",
 		"build-start": "tsc && yarn run start",
 		"ci-install-and-verify": "yarn install --check-cache --immutable --immutable-cache && yarn run test --ci && yarn run lint && yarn run build",
-		"dev": "nodemon",
-		"dev-build-and-run": "yarn run build && node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
-		"dev-inspect": "node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
 		"lint": "eslint .",
 		"start": "node --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
-		"test": "jest"
+		"start-debug": "node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
+		"test": "jest",
+		"watch": "nodemon"
 	},
 	"packageManager": "yarn@3.1.0"
 }

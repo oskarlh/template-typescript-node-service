@@ -3,26 +3,35 @@
 	"configurations": [
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Debug Program",
+			"name": "Build & run & watch for changes",
+			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
+			"request": "launch",
+			"restart": true,
+  			"runtimeArgs": ["run", "watch"],
+       		"runtimeExecutable": "yarn",
+			"skipFiles": ["<node_internals>/**", ".yarn/**"],
+			"type": "pwa-node",
+		},
+		{
+			"internalConsoleOptions": "openOnSessionStart",
+			"name": "Build & run",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"preLaunchTask": "npm: build",
-			"program": "${workspaceFolder}/src/index.ts",
 			"request": "launch",
-			"runtimeArgs": ["--enable-source-maps", "--inspect", "--nolazy", "--require=./suppressExperimentalWarnings.cjs"],
+  			"runtimeArgs": ["run", "start-debug"],
+       		"runtimeExecutable": "yarn",
 			"skipFiles": ["<node_internals>/**", ".yarn/**"],
 			"type": "pwa-node"
 		},
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Run Nodemon for automatic restarts on code change",
+			"name": "Build",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"request": "launch",
-  			"runtimeArgs": ["nodemon"],
+  			"runtimeArgs": ["run", "build"],
        		"runtimeExecutable": "yarn",
-			"program": "${workspaceFolder}/src/index.ts",
-			"restart": true,
 			"skipFiles": ["<node_internals>/**", ".yarn/**"],
-			"type": "pwa-node",
+			"type": "pwa-node"
 		}
 	]
 }
