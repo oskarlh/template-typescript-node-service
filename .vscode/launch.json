@@ -2,16 +2,27 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"cwd": "${workspaceRoot}",
 			"internalConsoleOptions": "openOnSessionStart",
 			"name": "Debug Program",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"preLaunchTask": "npm: build",
 			"program": "${workspaceFolder}/src/index.ts",
 			"request": "launch",
-			"runtimeArgs": ["--nolazy", "--inspect", "--enable-source-maps"],
+			"runtimeArgs": ["--enable-source-maps", "--inspect", "--nolazy", "--require=./suppressExperimentalWarnings.cjs"],
 			"skipFiles": ["<node_internals>/**", ".yarn/**"],
 			"type": "pwa-node"
+		},
+		{
+			"internalConsoleOptions": "openOnSessionStart",
+			"name": "Run Nodemon for automatic restarts on code change",
+			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
+			"request": "launch",
+  			"runtimeArgs": ["nodemon"],
+       		"runtimeExecutable": "yarn",
+			"program": "${workspaceFolder}/src/index.ts",
+			"restart": true,
+			"skipFiles": ["<node_internals>/**", ".yarn/**"],
+			"type": "pwa-node",
 		}
 	]
 }
