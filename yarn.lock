@@ -528,18 +528,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/environment@npm:^27.3.1":
-  version: 27.3.1
-  resolution: "@jest/environment@npm:27.3.1"
-  dependencies:
-    "@jest/fake-timers": ^27.3.1
-    "@jest/types": ^27.2.5
-    "@types/node": "*"
-    jest-mock: ^27.3.0
-  checksum: 8eb31d7565d3f04ab77fb26d111b848e82ec64a2eabb064b37f0a1bca92b40e69aec91cbef04994b44af3455f6325b03efe8ad4f1154d2c0e59c6560aa2621b9
-  languageName: node
-  linkType: hard
-
 "@jest/environment@npm:^27.4.4":
   version: 27.4.4
   resolution: "@jest/environment@npm:27.4.4"
@@ -549,20 +537,6 @@ __metadata:
     "@types/node": "*"
     jest-mock: ^27.4.2
   checksum: 59296abb5d073b7a5f24faba6d39e716cbbba077b7477e944a46cfdc7a0624035e4c78c3cb8d27e0875ecb26a1526720be177a9e1aef0efed8e7ba8dd9fb4b6e
-  languageName: node
-  linkType: hard
-
-"@jest/fake-timers@npm:^27.3.1":
-  version: 27.3.1
-  resolution: "@jest/fake-timers@npm:27.3.1"
-  dependencies:
-    "@jest/types": ^27.2.5
-    "@sinonjs/fake-timers": ^8.0.1
-    "@types/node": "*"
-    jest-message-util: ^27.3.1
-    jest-mock: ^27.3.0
-    jest-util: ^27.3.1
-  checksum: 6ebf8c91c48b5a064bb0596414aa0f2eb240030121683120e05b44acda2777d4ddd2a17fb0a532aa95f724e2b3c0acf149702f8a235b1553b5d8d2316f17a08a
   languageName: node
   linkType: hard
 
@@ -3218,29 +3192,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-environment-node-single-context@npm:^27.2.0":
-  version: 27.2.0
-  resolution: "jest-environment-node-single-context@npm:27.2.0"
-  dependencies:
-    jest-environment-node: ^27.2.4
-  checksum: 19578b5abd1120342f2628ca19a28cf330d35fae129c5c32de67bceff73053cc10db239e6e20fc1d78fb045504746c5d2f1c7b79dffb968f1a7c670a75847d54
-  languageName: node
-  linkType: hard
-
-"jest-environment-node@npm:^27.2.4":
-  version: 27.3.1
-  resolution: "jest-environment-node@npm:27.3.1"
-  dependencies:
-    "@jest/environment": ^27.3.1
-    "@jest/fake-timers": ^27.3.1
-    "@jest/types": ^27.2.5
-    "@types/node": "*"
-    jest-mock: ^27.3.0
-    jest-util: ^27.3.1
-  checksum: 40bab41957a253525b394055489568e748bea478f5b3903ff5c4e59c373adf4257788c28303dfd08e414271a3ff57cec74848a435066dcb8504865ed594e98c0
-  languageName: node
-  linkType: hard
-
 "jest-environment-node@npm:^27.4.4":
   version: 27.4.4
   resolution: "jest-environment-node@npm:27.4.4"
@@ -3341,23 +3292,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-message-util@npm:^27.3.1":
-  version: 27.3.1
-  resolution: "jest-message-util@npm:27.3.1"
-  dependencies:
-    "@babel/code-frame": ^7.12.13
-    "@jest/types": ^27.2.5
-    "@types/stack-utils": ^2.0.0
-    chalk: ^4.0.0
-    graceful-fs: ^4.2.4
-    micromatch: ^4.0.4
-    pretty-format: ^27.3.1
-    slash: ^3.0.0
-    stack-utils: ^2.0.3
-  checksum: 2d10734765e3e965f92b7cf009206a702e644228114bda3e20c40f59fe603422a55aa6632b4413e030bf352a03f362d321c0d881908c1d24b05e097da3ee3c4a
-  languageName: node
-  linkType: hard
-
 "jest-message-util@npm:^27.4.2":
   version: 27.4.2
   resolution: "jest-message-util@npm:27.4.2"
@@ -3372,16 +3306,6 @@ __metadata:
     slash: ^3.0.0
     stack-utils: ^2.0.3
   checksum: c08ef1c8c1a2001c2f38d6ad3717a6e188b8b25c79b8bd87f2800b9c046f50f33bcd6ab1a9b5a5cc3218b40cf60f37d0583aa0b36ea870c8f100ba0ca7a3c479
-  languageName: node
-  linkType: hard
-
-"jest-mock@npm:^27.3.0":
-  version: 27.3.0
-  resolution: "jest-mock@npm:27.3.0"
-  dependencies:
-    "@jest/types": ^27.2.5
-    "@types/node": "*"
-  checksum: 904b9116e03cbcd3baba08a18be88e29749c5b715ec7659665079b4aa9f54b7b87c4c7e7bf5b99fb966fefa08a25b3886e15ad31ba453104e681075ec9d8418c
   languageName: node
   linkType: hard
 
@@ -3549,7 +3473,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-util@npm:^27.0.0, jest-util@npm:^27.3.1":
+"jest-util@npm:^27.0.0":
   version: 27.3.1
   resolution: "jest-util@npm:27.3.1"
   dependencies:
@@ -4274,7 +4198,6 @@ __metadata:
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
     jest: ^27.4.5
-    jest-environment-node-single-context: ^27.2.0
     nodemon: ^2.0.15
     prettier: ^2.5.1
     ts-jest: ^27.1.2

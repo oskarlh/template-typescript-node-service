@@ -9,6 +9,6 @@ export default {
 	},
 	preset: "ts-jest/presets/default-esm",
 	rootDir: "./src",
-	testEnvironment: "jest-environment-node-single-context",
+	testEnvironment: "jest-environment-node",
 	testRegex: "\\.test\\.ts$",
 };
