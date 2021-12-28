@@ -39,7 +39,7 @@ const notAbortErrors = [
 ];
 
 describe("isAbortError", () => {
-	// TODO: Enable this once Jest stops deleting DOMException
+	// TODO: Enable this once Jest stops deleting DOMException 😠
 	// ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
 	xit("recognizes AbortErrors from Node's internal modules", async () => {
 		const abortController = new AbortController();
@@ -63,9 +63,11 @@ describe("isAbortError", () => {
 
 	// TODO: When https://github.com/nodejs/node/issues/40692 has been fixed, enable this test and
 	// replace "Error" with "DOMException" in the implementation
+	// ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
 	xit("recognizes DOMExceptions only", () => {
 		const notAnAbortError = new Error(); // Wrong type for an AbortError
 		notAnAbortError.name = "AbortError";
 		expect(isAbortError(notAnAbortError)).toBe(false);
 	});
+	// ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
 });
