@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:17-alpine AS ci-verifier
+FROM node:18-alpine AS ci-verifier
 WORKDIR /app
 COPY . .
 ENV NODE_ENV production
@@ -8,7 +8,7 @@ CMD ["yarn", "run", "ci-install-and-verify"]
 
 
 
-FROM node:17-alpine as builder
+FROM node:18-alpine as builder
 WORKDIR /app
 COPY . .
 ENV NODE_ENV=development
@@ -17,7 +17,7 @@ RUN yarn run build
 
 
 
-FROM node:17-alpine AS runner
+FROM node:18-alpine AS runner
 WORKDIR /app
 
 COPY --from=builder /app/.pnp.cjs ./.pnp.cjs
