@@ -22,13 +22,13 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"build-start": "tsc && yarn run start",
-		"ci-install-and-verify": "yarn install --check-cache --immutable --immutable-cache && yarn run test --ci && yarn run lint && yarn run build",
+		"build-start": "tsc && npm run start",
+		"ci-install-and-verify": "npm install && npm run test --ci && npm run lint && npm run build",
 		"lint": "eslint .",
 		"start": "node --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
 		"start-debug": "node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
 		"test": "jest",
 		"watch": "nodemon"
 	},
-	"packageManager": "yarn@3.1.1"
+	"packageManager": "npm"
 }

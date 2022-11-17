@@ -5,14 +5,8 @@
 	"editor.formatOnPaste": true,
 	"editor.formatOnType": true,
 	"search.exclude": {
-		"**/.yarn": true,
-		"**/.pnp.*": true
+		"**/node_module": true,
 	},
-	"eslint.nodePath": ".yarn/sdks",
-	"prettier.prettierPath": ".yarn/sdks/prettier/index.js",
-	"typescript.tsdk": ".yarn/sdks/typescript/lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"jest.jestCommandLine": "yarn run jest",
 	"editor.insertSpaces": false,
 	"eslint.rules.customizations": [
 		{ "rule": "prettier/prettier", "severity": "off" }

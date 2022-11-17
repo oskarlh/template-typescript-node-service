@@ -1,7 +1,7 @@
 {
   "watch": ["./src/"],
-  "exec": "yarn run build && node --enable-source-maps --inspect --nolazy --require=./suppressExperimentalWarnings.cjs dist/index.js",
-  "ignore": ["./.yarn/", "*.test.ts"],
+  "exec": "npm run build && node --enable-source-maps --inspect --nolazy --require=./suppressExperimentalWarnings.cjs dist/index.js",
+  "ignore": ["./node_packages/", "*.test.ts"],
   "ext": "json,ts",
   "signal": "SIGTERM"
 }

@@ -1,12 +1,4 @@
 
 /dist
+/node_modules
 /tsconfig.tsbuildinfo
-
-# Yarn with Zero-Installs
-/.yarn/*
-!/.yarn/cache
-!/.yarn/patches
-!/.yarn/plugins
-!/.yarn/releases
-!/.yarn/sdks
-!/.yarn/versions

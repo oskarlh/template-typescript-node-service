@@ -8,8 +8,8 @@
 			"request": "launch",
 			"restart": true,
   			"runtimeArgs": ["run", "watch"],
-       		"runtimeExecutable": "yarn",
-			"skipFiles": ["<node_internals>/**", ".yarn/**"],
+       		"runtimeExecutable": "npm",
+			"skipFiles": ["<node_internals>/**", "node_modules/**"],
 			"type": "pwa-node",
 		},
 		{
@@ -19,8 +19,8 @@
 			"preLaunchTask": "npm: build",
 			"request": "launch",
   			"runtimeArgs": ["run", "start-debug"],
-       		"runtimeExecutable": "yarn",
-			"skipFiles": ["<node_internals>/**", ".yarn/**"],
+       		"runtimeExecutable": "npm",
+			"skipFiles": ["<node_internals>/**", "node_modules/**"],
 			"type": "pwa-node"
 		},
 		{
@@ -29,8 +29,8 @@
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"request": "launch",
   			"runtimeArgs": ["run", "build"],
-       		"runtimeExecutable": "yarn",
-			"skipFiles": ["<node_internals>/**", ".yarn/**"],
+       		"runtimeExecutable": "npm",
+			"skipFiles": ["<node_internals>/**", "node_modules/**"],
 			"type": "pwa-node"
 		}
 	]
