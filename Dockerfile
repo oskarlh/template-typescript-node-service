@@ -4,7 +4,6 @@ FROM node:18-alpine AS ci-verifier
 WORKDIR /app
 COPY . .
 ENV NODE_ENV=development
-RUN npm install --global npm
 CMD ["npm", "run", "ci-install-and-verify"]
 
 
@@ -13,7 +12,6 @@ FROM node:18-alpine as builder
 WORKDIR /app
 COPY . .
 ENV NODE_ENV=development
-RUN npm install --global npm
 RUN npm install
 RUN npm run build
 
