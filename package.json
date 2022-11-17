@@ -29,6 +29,5 @@
 		"start-debug": "node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
 		"test": "jest",
 		"watch": "nodemon"
-	},
-	"packageManager": "npm"
+	}
 }
