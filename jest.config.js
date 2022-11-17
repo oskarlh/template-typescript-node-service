@@ -1,14 +1,10 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 export default {
-	globals: {
-		"ts-jest": {
-			useESM: true,
-		},
-	},
 	moduleNameMapper: {
 		"^(\\.{1,2}/.*)\\.js$": "$1",
 	},
-	preset: "ts-jest/presets/default-esm",
+	preset: "ts-jest",
 	rootDir: "./src",
-	testEnvironment: "jest-environment-node",
+	testEnvironment: "node",
 	testRegex: "\\.test\\.ts$",
 };
