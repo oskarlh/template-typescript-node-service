@@ -5,14 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COMPOSE_FILE: docker-compose.ci-verifier.yml
-# TODO:      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-# TODO:      DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
     steps:
     - name: Code checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-#    - name: Login to DockerHub
-#      run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - name: DockerHub Login
+      uses: docker/login-action@v2.1.0
+      with:
+        password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
 
     - name: Build image with tests
       run: docker compose -f $COMPOSE_FILE build
