@@ -11,7 +11,8 @@ const sigintController = new AbortController();
 
 let mainFinished = false;
 
-// Handle kill signals
+// Handle kill signals.
+// This doesn't work with Nodemon - on Windows, at least.
 process.once("SIGINT", () => {
 	sigintController.abort();
 	setTimeout(() => {

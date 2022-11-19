@@ -1,7 +1,6 @@
 {
   "watch": ["./src/"],
-  "exec": "npm run build && node --enable-source-maps --inspect --nolazy --require=./suppressExperimentalWarnings.cjs dist/index.js",
+  "exec": "npm run build-fast && node --enable-source-maps --inspect --nolazy --require=./suppressExperimentalWarnings.cjs dist/index.js",
   "ignore": ["./node_packages/", "*.test.ts"],
-  "ext": "json,ts",
-  "signal": "SIGTERM"
+  "ext": "json,ts"
 }

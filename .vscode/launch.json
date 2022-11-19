@@ -3,35 +3,35 @@
 	"configurations": [
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Build & run & watch for changes",
+			"name": "Fast build & run & watch for changes",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"request": "launch",
 			"restart": true,
   			"runtimeArgs": ["run", "watch"],
        		"runtimeExecutable": "npm",
 			"skipFiles": ["<node_internals>/**", "node_modules/**"],
-			"type": "pwa-node",
+			"type": "node",
 		},
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Build & run",
+			"name": "Full build & run",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"preLaunchTask": "npm: build",
 			"request": "launch",
   			"runtimeArgs": ["run", "start-debug"],
        		"runtimeExecutable": "npm",
 			"skipFiles": ["<node_internals>/**", "node_modules/**"],
-			"type": "pwa-node"
+			"type": "node"
 		},
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Build",
+			"name": "Full build",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"request": "launch",
   			"runtimeArgs": ["run", "build"],
        		"runtimeExecutable": "npm",
 			"skipFiles": ["<node_internals>/**", "node_modules/**"],
-			"type": "pwa-node"
+			"type": "node"
 		}
 	]
 }
