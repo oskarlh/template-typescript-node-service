@@ -1,6 +1,6 @@
 {
   "watch": ["./src/"],
-  "exec": "npm run build-fast && node --enable-source-maps --inspect --nolazy --require=./suppressExperimentalWarnings.cjs dist/index.js",
+  "exec": "npm run build-without-typechecking && npm run start-debug",
   "ignore": ["./node_packages/", "*.test.ts"],
   "ext": "json,ts"
 }

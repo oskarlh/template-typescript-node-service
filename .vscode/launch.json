@@ -3,7 +3,7 @@
 	"configurations": [
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Fast build & run & watch for changes",
+			"name": "Watch, build (without typechecking) & run",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"request": "launch",
 			"restart": true,
@@ -14,9 +14,9 @@
 		},
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Full build & run",
+			"name": "Build (with typechecking) & run",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
-			"preLaunchTask": "npm: build",
+			"preLaunchTask": "npm: build-full",
 			"request": "launch",
   			"runtimeArgs": ["run", "start-debug"],
        		"runtimeExecutable": "npm",
@@ -25,10 +25,10 @@
 		},
 		{
 			"internalConsoleOptions": "openOnSessionStart",
-			"name": "Full build",
+			"name": "Build (with typechecking)",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"request": "launch",
-  			"runtimeArgs": ["run", "build"],
+  			"runtimeArgs": ["run", "build-with-typechecking"],
        		"runtimeExecutable": "npm",
 			"skipFiles": ["<node_internals>/**", "node_modules/**"],
 			"type": "node"
