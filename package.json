@@ -27,7 +27,7 @@
 		"build-and-verify": "npm run test-with-typechecking --ci && npm run lint && npm run build-with-typechecking",
 		"build-with-typechecking": "tsc",
 		"build-with-typechecking-and-start": "tsc && npm run start",
-		"build-without-typechecking": "swc src -d dist",
+		"build-without-typechecking": "swc -C exclude=.test.ts -d dist -s true -- src",
 		"lint": "eslint .",
 		"start": "node --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
 		"start-debug": "node --nolazy --inspect --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",
