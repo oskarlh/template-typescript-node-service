@@ -24,7 +24,11 @@
 			}
 		],
 		"prefer-const": ["warn", { "destructuring": "all" }],
-		"sort-keys": ["warn", "asc", { "natural": true }],
+		"sort-keys": [
+			"warn",
+			"asc",
+			{ "allowLineSeparatedGroups": true, "minKeys": 2, "natural": true }
+		],
 		"sort-vars": "warn",
 		"prettier/prettier": "warn"
 	}
