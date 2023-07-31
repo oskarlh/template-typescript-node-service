@@ -6,7 +6,8 @@ COPY . .
 RUN NODE_ENV=development npm install
 
 FROM pre-build AS ci-verifier
-CMD ["NODE_ENV=development", "npm", "run", "build-and-verify"]
+ENV NODE_ENV development
+CMD ["npm", "run", "build-and-verify"]
 
 
 
