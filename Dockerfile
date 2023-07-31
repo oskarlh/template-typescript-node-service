@@ -3,16 +3,15 @@
 FROM node:20-alpine as pre-build
 WORKDIR /app
 COPY . .
-ENV NODE_ENV=development
-RUN npm install --production=false
+RUN NODE_ENV=development npm install
 
 FROM pre-build AS ci-verifier
-CMD ["npm", "run", "build-and-verify"]
+CMD ["RUN NODE_ENV=development", "npm", "run", "build-and-verify"]
 
 
 
 FROM pre-build as build
-RUN npm run build
+RUN NODE_ENV=development npm run build
 
 
 
@@ -20,11 +19,11 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 COPY --from=build /app/package.json ./package.json
-COPY --from=build /app/package.lock ./package.lock
-RUN npm install --production
+COPY --from=build /app/package-lock.json ./package-lock.json
+RUN npm install --omit=dev
 
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/suppressExperimentalWarnings.cjs ./suppressExperimentalWarnings.cjs
-ENV NODE_ENV production
 
+ENV NODE_ENV production
 ENTRYPOINT ["npm", "run", "start"]
