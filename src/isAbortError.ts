@@ -4,6 +4,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/API/AbortController
  * **/
 
-export default function isAbortError(error: unknown): error is object & { name: "AbortError" } {
+export function isAbortError(error: unknown): error is object & { name: "AbortError" } {
 	return typeof error === "object" && (error as null | { name?: unknown })?.name === "AbortError";
 }

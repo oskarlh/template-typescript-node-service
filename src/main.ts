@@ -1,5 +1,5 @@
 import { SECONDS_BETWEEN_MESSAGES } from "./config.js";
-import isAbortError from "./isAbortError.js";
+import { isAbortError } from "./isAbortError.js";
 import { sleep } from "./sleep.js";
 
 export async function main(shutdownSignal: AbortSignal): Promise<void> {
