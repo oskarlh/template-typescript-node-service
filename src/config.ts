@@ -9,5 +9,4 @@ function loadEnvFiles() {
 }
 loadEnvFiles();
 
-export const SECONDS_BETWEEN_MESSAGES =
-	Number(process.env.SECONDS_BETWEEN_MESSAGES) || 5;
+export const SECONDS_BETWEEN_MESSAGES = Number(process.env.SECONDS_BETWEEN_MESSAGES) || 5;

@@ -3,10 +3,7 @@ import { setTimeout } from "timers/promises";
 import isAbortError from "./isAbortError.js";
 
 const notAbortErrors = [
-	new DOMException(
-		"AbortError",
-		"The name is wrong so this is not an AbortError",
-	),
+	new DOMException("AbortError", "The name is wrong so this is not an AbortError"),
 	new DOMException("abc", "AbortError? No"),
 	{ comment: "This is just some object", name: "NotAbortError" },
 	"AbortError",
