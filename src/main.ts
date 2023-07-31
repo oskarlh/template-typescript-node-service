@@ -1,8 +1,8 @@
 import { SECONDS_BETWEEN_MESSAGES } from "./config.js";
 import isAbortError from "./isAbortError.js";
-import sleep from "./sleep.js";
+import { sleep } from "./sleep.js";
 
-export default async function main(shutdownSignal: AbortSignal): Promise<void> {
+export async function main(shutdownSignal: AbortSignal): Promise<void> {
 	try {
 		console.log("Hello!");
 		await sleep(SECONDS_BETWEEN_MESSAGES, shutdownSignal);

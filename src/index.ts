@@ -1,6 +1,6 @@
 import process from "process";
 import { setTimeout } from "timers";
-import main from "./main.js";
+import { main } from "./main.js";
 
 // SIGINT & error handling. Calls main()
 
