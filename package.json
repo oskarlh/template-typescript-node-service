@@ -10,6 +10,9 @@
 	"keywords": [
 		"template-typescript-node-service"
 	],
+	"dependencies": {
+		"dotenv": "^16.0.3"
+	},
 	"devDependencies": {
 		"@swc/cli": "^0.1.57",
 		"@swc/core": "^1.3.18",
@@ -39,7 +42,7 @@
 		"test-with-typechecking": "jest --config=jest.config.with-typechecking.js",
 		"watch": "nodemon"
 	},
-	"dependencies": {
-		"dotenv": "^16.0.3"
-	}
+	"files": [
+		"dist"
+	]
 }
