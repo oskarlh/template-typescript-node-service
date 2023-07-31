@@ -1,6 +1,6 @@
 {
 	"name": "oskarlh-typescript-project",
-	"repository": "https://github.com/oskarlh/oskarlh-typescript-project.git",
+	"repository": "https://github.com/oskarlh/oskarlh-typescript-project-service.git",
 	"version": "1.0.0",
 	"main": "dist/index.js",
 	"type": "module",
