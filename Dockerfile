@@ -12,7 +12,7 @@ CMD ["npm", "run", "build-and-verify"]
 
 
 FROM pre-build as build
-RUN npm run build-with-typechecking
+RUN npm run build
 
 
 

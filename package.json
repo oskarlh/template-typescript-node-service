@@ -26,7 +26,7 @@
 	"scripts": {
 		"build": "tsc",
 		"build-and-start": "tsc && npm run start",
-		"build-and-verify": "npm run test-with-typechecking --ci && npm run lint && npm run build-with-typechecking",
+		"build-and-verify": "npm run test-with-typechecking --ci && npm run lint && npm run build",
 		"build-without-typechecking": "swc -C exclude=.test.ts -d dist -s true -- src",
 		"lint": "eslint .",
 		"start": "node --enable-source-maps --require=./suppressExperimentalWarnings.cjs dist/index.js",

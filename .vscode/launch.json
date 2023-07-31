@@ -16,7 +16,7 @@
 			"internalConsoleOptions": "openOnSessionStart",
 			"name": "Build (with typechecking) & run",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
-			"preLaunchTask": "npm: build-full",
+			"preLaunchTask": "npm: build",
 			"request": "launch",
   			"runtimeArgs": ["run", "start-debug"],
        		"runtimeExecutable": "npm",
@@ -28,7 +28,7 @@
 			"name": "Build (with typechecking)",
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"request": "launch",
-  			"runtimeArgs": ["run", "build-with-typechecking"],
+  			"runtimeArgs": ["run", "build"],
        		"runtimeExecutable": "npm",
 			"skipFiles": ["<node_internals>/**", "node_modules/**"],
 			"type": "node"
