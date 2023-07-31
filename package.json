@@ -1,6 +1,6 @@
 {
 	"name": "template-typescript-node-service",
-	"repository": "https://github.com/oskarlh/template-typescript-node-service.git",
+	"repository": "github:oskarlh/template-typescript-node-service",
 	"version": "1.0.0",
 	"main": "dist/index.js",
 	"type": "module",
