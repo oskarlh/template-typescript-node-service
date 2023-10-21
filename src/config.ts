@@ -2,10 +2,14 @@ import { config } from "dotenv";
 import { existsSync } from "fs";
 
 function loadEnvFiles() {
-	if (existsSync(".env.local")) {
-		config({ path: ".env.local" });
+	const inUnitTest = process.env.JEST_WORKER_ID !== undefined;
+	/* istanbul ignore if */
+	if (!inUnitTest) {
+		if (existsSync(".env.local")) {
+			config({ path: ".env.local" });
+		}
+		config({ path: ".env" });
 	}
-	config({ path: ".env" });
 }
 loadEnvFiles();
 
