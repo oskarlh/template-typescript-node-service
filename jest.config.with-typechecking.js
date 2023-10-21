@@ -1,8 +1,8 @@
-import withoutTypechecking from "./jest.config.js";
+import { sharedSettings } from "./jest.config.js";
 
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 export default {
-	...withoutTypechecking,
+	...sharedSettings,
 	collectCoverage: true,
 	collectCoverageFrom: ["./src/**/*.ts"],
 	coverageReporters: ["text"],
@@ -14,7 +14,5 @@ export default {
 			statements: 5,
 		},
 	},
-	transform: {
-		"^.+\\.ts$": ["ts-jest"],
-	},
+	preset: "ts-jest/presets/default-esm",
 };
