@@ -1,5 +1,6 @@
-
-/dist
-/node_modules
-/tsconfig.tsbuildinfo
-/.env.local
+dist
+dist-pack
+node_modules
+tmp
+tsconfig.tsbuildinfo
+**/*.local

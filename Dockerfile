@@ -2,21 +2,27 @@
 
 FROM node:20-alpine as pre-build
 WORKDIR /app
-COPY . .
+COPY .eslint* .prettier* LICENSE README.md jest.* package.json package-lock.json suppressExperimentalWarnings.cjs tsconfig.json ./
 RUN NODE_ENV=development npm install
+COPY src ./src
 
-FROM pre-build AS ci-verifier
+
+FROM pre-build AS ci-verify
 ENV NODE_ENV development
-CMD ["npm", "run", "build-and-verify"]
+CMD ["npm", "run", "verify"]
 
 
+FROM pre-build AS ci-pack
+COPY ci-pack.sh ./ci-pack.sh
+RUN apk add jq
+RUN chmod +x ci-pack.sh
 
-FROM pre-build as build
-RUN NODE_ENV=development npm run build
+VOLUME "/app/dist-pack"
+ENV NODE_ENV development
+CMD ["./ci-pack.sh"]
 
 
-
-FROM node:20-alpine AS runner
+FROM node:20-alpine
 WORKDIR /app
 
 COPY --from=build /app/package.json ./package.json

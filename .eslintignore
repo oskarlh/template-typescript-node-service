@@ -1,2 +1,4 @@
-/dist
-/node_modules
+dist
+dist-pack
+node_modules
+tmp
