@@ -23,17 +23,17 @@ describe("isAbortError", () => {
 		abortController.abort();
 		const abortError = await setTimeout(1, undefined, {
 			signal: abortController.signal,
-		}).catch((e) => e);
+		}).catch((e: unknown) => e);
 
 		expect(isAbortError(abortError)).toBe(true);
 	});
 
-	it("recognizes manually created AbortErrors", async () => {
+	it("recognizes manually created AbortErrors", () => {
 		expect(isAbortError(new DOMException("Abc", "AbortError"))).toBe(true);
 		expect(isAbortError({ name: "AbortError" })).toBe(true);
 	});
 
-	it("does not consider other errors to be AbortErrors", async () => {
+	it("does not consider other errors to be AbortErrors", () => {
 		for (const notAnAbortError of notAbortErrors) {
 			expect(isAbortError(notAnAbortError)).toBe(false);
 		}

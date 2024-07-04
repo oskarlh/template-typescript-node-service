@@ -20,24 +20,24 @@
 		"dotenv": "^16.0.3"
 	},
 	"devDependencies": {
-		"@swc/cli": "^0.1",
+		"@swc/cli": "^0.4",
 		"@swc/core": "^1",
 		"@swc/jest": "^0.2",
+		"@types/eslint__js": "^8.42.3",
 		"@types/jest": "^29",
 		"@types/node": "^20",
-		"@typescript-eslint/eslint-plugin": "^6",
-		"@typescript-eslint/parser": "^6",
-		"eslint": "^8",
+		"eslint": "^9",
 		"eslint-config-prettier": "^9",
 		"eslint-plugin-prettier": "^5",
 		"jest": "^29",
 		"nodemon": "^3",
 		"prettier": "^3",
 		"ts-jest": "^29",
-		"typescript": "~5.2"
+		"typescript": "~5.5",
+		"typescript-eslint": "^8.0.0-alpha.39"
 	},
 	"scripts": {
-		"build": "tsc",
+		"build": "tsc --project tsconfig.build.json",
 		"build-and-start": "npm run build && npm run start",
 		"build-and-verify": "npm run test-with-typechecking --ci && npm run lint && npm run build",
 		"build-without-typechecking": "swc -C exclude=.test.ts -d dist -s true -- src",
