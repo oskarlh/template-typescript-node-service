@@ -10,6 +10,10 @@ process.emitWarning = (warning, ...args) => {
 		args[0] !== "ExperimentalWarning" &&
 		(typeof args[0] !== "object" || args[0].type !== "ExperimentalWarning")
 	) {
-		return emitWarning(warning, ...args);
+		return emitWarning(
+			warning,
+			// @ts-ignore
+			...args,
+		);
 	}
 };
