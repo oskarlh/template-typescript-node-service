@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:20-alpine as pre-build
+FROM node:22-alpine as pre-build
 WORKDIR /app
 COPY .eslint* .prettier* LICENSE README.md jest.* package.json package-lock.json suppressExperimentalWarnings.cjs tsconfig.json ./
 RUN NODE_ENV=development npm install
