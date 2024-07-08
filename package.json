@@ -34,7 +34,7 @@
 		"prettier": "^3",
 		"ts-jest": "^29",
 		"typescript": "~5.5",
-		"typescript-eslint": "^8.0.0-alpha.39"
+		"typescript-eslint": "^8.0.0-alpha.41"
 	},
 	"scripts": {
 		"build": "tsc --project tsconfig.build.json",
